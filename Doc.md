@@ -2,30 +2,30 @@
 
 ### Overview
 the solution consists of 3 notebook outputting 3 prediticyions using different models (params)  the process of training, evaluating, and combining predictions from 3 machine learning models: CatBoost and Logistic Regression are used. the solution 
-- the second solution for the ensemble was PCA standard scaler and simple imputer, 
-- the third ensemble file was using just the catboost model with simple FE,we combined ensembled the second and third solution by mean the result, and the catboost and log-reg was then add to the final mean of the second and third solution. 
+## part1. Ipynb this notebook consist of the following 
+- reading the Data
+- apply isolation forest to mark anamolies 
+- modeled using catboost class weight parameter is set to balance the minority classes   
+- 
+## part2. Ipynb solution consist of  
+- simple imputer   
+- applying PCA
+- standard scaler (No need to) 
+- OneHot Encoding
+- class weight is set using catboost
 
-### Key Steps
-ic.  hh i. 
-1. Importing Necessary Libraries
-   - Standard Python libraries for data manipulation (pandas, numpy), model training (CatBoostClassifier), and performance evaluation (log_loss from sklearn.metrics).
+## part3. Ipynb consist of 0
+-fill in missign values with bfill method 
+- engineered features and dropping features 
+- applied isolation forest 
+- modeled using catboost and logistic regression the catboost model include class weight params setting 
+ 
 
-2. Data Preprocessing
-   - Features (X_train_cleaned) and target labels (y_train_cleaned) are loaded or cleaned prior to model training.
-   - The test dataset (X_test) is also processed similarly.
-
-3. Training CatBoost Model
-   - A CatBoostClassifier model is trained on the preprocessed training data (X_train_cleaned and y_train_cleaned).
-   - The model predicts class probabilities on the test set (X_test).
-   - Model performance is evaluated using Log Loss.
-
-   
-   pred = catBoost_model.predict_proba(X_train_cleaned)
-   catBoost_value = log_loss(y_train_cleaned, pred)
-   print(f"Log Loss: {catBoost_value}")
-   
+### metric
+The metric used is log loss 
+  
 4. Creating Submission File
-   - A submission DataFrame (cat_submission) is created to store predicted probabilities for each class (assuming 125 classes).
+   - A submission DataFrame is created to store predicted probabilities for each class 
    - Predicted probabilities for each class are extracted using the predict_proba method of the CatBoost model.
 
    
@@ -38,17 +38,13 @@ ic.  hh i.
        cat_submission['Target_' + str(class_label)] = y_pred_proba_cat[:, i]
    
 5. Combining Predictions
-   - Predictions from the logistic regression model (logistic_sub) are averaged with the predictions from CatBoost (catBoost_sub), creating an ensemble prediction. 
-   - The final DataFrame is saved for submission.
-
-   final = (logistic_sub.drop(columns = ['id']) + catBoost_sub.drop(columns = ['id'])) / 2
-   final.insert(0, 'id', logistic_sub['id'])
-   final.to_csv('mean_logistic_reg_catBoost.csv', index=False)
-   
-   note that this submission is just one part of three notebooks. the other 2 notebooks used Catboost with different approaches 
+   - Predictions from part1.ipynb , part2.ipynb, 
+are averaged and then again averaged with the predictions from part3.ipynb, creating an ensemble prediction. 
+  
+  
 ### Outputs
-- Log Loss: The notebook prints the Log Loss of the CatBoost model, which is a measure of its performance on the training data.
-- Submission File: A CSV file (mean_logistic_reg_catBoost.csv) is generated with the final predictions.
+
+- Submission File: A CSV file (mean_of_all.csv) is generated with the final predictions.
 
 ---
 
