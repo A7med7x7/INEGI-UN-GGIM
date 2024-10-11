@@ -1,7 +1,7 @@
-## Notebook Documentation: CatBoost & Logistic Regression
+## Notebook Documentation: 9th Place Solution 
 
 ### Overview
-This notebook demonstrates the process of training, evaluating, and combining predictions from two machine learning models: CatBoost and Logistic Regression. It showcases feature engineering, model training, evaluation using log loss, and combining the results for a final prediction, note that this is just one of the solutions used, the second solution for the ensemble was PCA standard scaler and simple imputer, the third ensemble file was using just the catboost model with simple FE,we combined ensembled the second and third solution by mean the result, and the catboost and log-reg was then add to the final mean of the second and third solution. 
+This notebook demonstrates the process of training, evaluating, and combining predictions from 3 machine learning models: CatBoost and Logistic Regression. It showcases feature engineering, model training, evaluation using log loss, and combining the results for a final prediction, note that this is just one of the solutions used, the second solution for the ensemble was PCA standard scaler and simple imputer, the third ensemble file was using just the catboost model with simple FE,we combined ensembled the second and third solution by mean the result, and the catboost and log-reg was then add to the final mean of the second and third solution. 
 
 ### Key Steps
 
