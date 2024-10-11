@@ -2,19 +2,19 @@
 
 ### Overview
 the solution consists of 3 notebook outputting 3 prediticyions using different models (params)  the process of training, evaluating, and combining predictions from 3 machine learning models: CatBoost and Logistic Regression are used. the solution 
-## part1. Ipynb this notebook consist of the following 
+## part1.ipynb this notebook consist of the following 
 - reading the Data
 - apply isolation forest to mark anamolies 
 - modeled using catboost class weight parameter is set to balance the minority classes   
 - 
-## part2. Ipynb solution consist of  
+## part2.ipynb solution consist of  
 - simple imputer   
 - applying PCA
 - standard scaler (No need to) 
 - OneHot Encoding
 - class weight is set using catboost
 
-## part3. Ipynb consist of 0
+## 'part3.ipynb' consist of 0
 -fill in missign values with bfill method 
 - engineered features and dropping features 
 - applied isolation forest 
