@@ -1,4 +1,4 @@
-## Notebook Documentation: 9th Place Solution 
+## Solution Documentation: 9th Place Solution 
 
 ### Overview
 the solution consists of 3 notebook outputting 3 prediticyions using different models (params)  the process of training, evaluating, and combining predictions from 3 machine learning models: CatBoost and Logistic Regression are used. the solution 
