@@ -49,6 +49,7 @@ are averaged and then again averaged with the predictions from `part3.ipynb`, cr
 ---
 
 ### Future work 
+- apply data validation technique (an intresting idea we had was to monitor the model predictions during training and see the instances that are set higher probably to a corrosponding class (i.e 0.85) in other words the model was confident in making these predictions, but they are actually wrong (Y true is corrospnding to different class) list all these instances and mark them as misslabled.  
 - Hyperparameter Tuning
 - Cross-Validation
 - Feature Engineering: Add more feature extraction and selection methods for better predictive accuracy.
