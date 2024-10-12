@@ -38,8 +38,8 @@ The metric used is log loss
        cat_submission['Target_' + str(class_label)] = y_pred_proba_cat[:, i]
    
 5. Combining Predictions
-   - Predictions from `part1.ipynb`, part2.ipynb, 
-are averaged and then again averaged with the predictions from part3.ipynb, creating an ensemble prediction. 
+   - Predictions from `part1.ipynb`, `part2.ipynb`
+are averaged and then again averaged with the predictions from `part3.ipynb`, creating an ensemble prediction. 
   
   
 ### Outputs
